@@ -4,11 +4,6 @@
   margin: 0 auto;
 }
 
-/* highlight link text */
-#links-nostore a:hover h2, #links-store a:hover h3 {
-  color: rgb(255, 173, 22);
-}
-
 #links-nostore {
   width: 80%;
   margin: 0 auto;
@@ -75,7 +70,26 @@
 /*position store links above their respective images*/
 #links-store h3, #links-nostore h2 {
   position: relative;
+}
+
+#darkMode #links-store h3, #darkMode #links-nostore h2 {
+  position: relative;
   color: rgb(255, 255, 255);
+}
+
+/* highlight link text */
+#darkMode #links-nostore a:hover h2, #darkMode #links-store a:hover h3 {
+  color: rgb(255, 173, 22);
+}
+
+#lightMode #links-store h3, #lightMode #links-nostore h2 {
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+/* highlight link text */
+#lightMode #links-nostore a:hover h2, #lightMode #links-store a:hover h3 {
+  color: rgb(255, 173, 22);
 }
 
 .events-link h2, .menu-link h2 {
