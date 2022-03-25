@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Volkhov:wght@700&display=swap" rel="stylesheet" />
   <script src="scripts/toggleDarkMode.js" defer></script>
+  <script src="scripts/highlightMenu.js" defer></script>
 </head>
 
 <body id="darkMode">
@@ -34,17 +35,17 @@
 
   <main>
     <h1>Menu</h1>
-    <div class="menu">
+    <div id="menu">
       <div>
         <table>
           <caption>
             Hot Drinks
           </caption>
           <tr>
-            <td><b>NON COFFEE</b></td>
-            <td>120z</td>
-            <td>16oz</td>
-            <td>20oz</td>
+            <th><b>NON COFFEE</b></th>
+            <th>120z</th>
+            <th>16oz</th>
+            <th>20oz</th>
           </tr>
           <tr>
             <td>Tea</td>
@@ -89,7 +90,12 @@
             <td>4.59</td>
           </tr>
           <tr>
-            <td colspan="4"><b>COFFEE</b></td>
+            <tr>
+              <th><b>COFFEE</b></th>
+              <th>120z</th>
+              <th>16oz</th>
+              <th>20oz</th>
+            </tr>
           </tr>
           <tr>
             <td>Brewed Coffee</td>
@@ -148,10 +154,10 @@
             Frappe's
           </caption>
           <tr>
-            <td><b>NON COFFEE</b></td>
-            <td>12oz</td>
-            <td>16oz</td>
-            <td>20oz</td>
+            <th><b>NON COFFEE</b></th>
+            <th>120z</th>
+            <th>16oz</th>
+            <th>20oz</th>
           </tr>
           <tr>
             <td>Tea Frappe</td>
@@ -195,10 +201,10 @@
             <td colspan="2">1.05</td>
           </tr>
           <tr>
-            <td><b>COFFEE</b></td>
-            <td>1 Shot</td>
-            <td>2 Shots</td>
-            <td>3 Shots</td>
+            <th><b>COFFEE</b></th>
+            <th>1 Shot</th>
+            <th>2 Shots</th>
+            <th>3 Shots</th>
           </tr>
           <tr>
             <td>Cappuccino Frappe</td>
@@ -239,10 +245,10 @@
             Over Ice
           </caption>
           <tr>
-            <td><b>NON COFFEE</b></td>
-            <td>12oz</td>
-            <td>16oz</td>
-            <td>20oz</td>
+            <th><b>NON COFFEE</b></th>
+            <th>120z</th>
+            <th>16oz</th>
+            <th>20oz</th>
           </tr>
           <tr>
             <td>Iced Chai</td>
@@ -281,7 +287,12 @@
             <td>3.81</td>
           </tr>
           <tr>
-            <td colspan="4"><b>COFFEE</b></td>
+            <tr>
+              <th><b>COFFEE</b></th>
+              <th>120z</th>
+              <th>16oz</th>
+              <th>20oz</th>
+            </tr>
           </tr>
           <tr>
             <td>Iced Coffe</td>
@@ -322,7 +333,7 @@
         </table>
       </div>
     </div>
-    <div class="note">
+    <div id="note">
       <p>Flavor Shot 0.85 Subst. Soy/Almond 1.00</p>
       <p>Extras: Add Espresso Shot 0.75 Add Ice Cream 1.60</p>
     </div>

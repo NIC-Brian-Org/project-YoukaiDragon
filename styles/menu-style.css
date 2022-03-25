@@ -4,11 +4,11 @@ main {
 }
 
 /* align-self not needed for table */
-h1, .note {
+h1, #note {
   align-self: center;
 }
 
-.menu {
+#menu {
   display: flex;
   justify-content: center;
 }
@@ -19,6 +19,6 @@ caption {
   font-weight: bold;
 }
 
-.menu section {
+#menu section {
   padding: 0 1%;
 }
