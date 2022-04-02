@@ -20,10 +20,6 @@ textarea {
   resize: none;
 }
 
-.note {
-  font-size: 1.3rem;
-}
-
 /*Set labels to fixed width to vertically align input fields*/
 label {
   display: inline-block;
@@ -33,4 +29,8 @@ label {
 
 .message label {
   vertical-align: top;
+}
+
+.pizza {
+  visibility: hidden;
 }

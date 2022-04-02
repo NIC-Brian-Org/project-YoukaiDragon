@@ -12,7 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Volkhov:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="scripts/toggleDarkMode.js" defer></script>
+  <script src="scripts/formScript.js" defer></script>
 </head>
 
 <body id="darkMode">
@@ -63,13 +65,8 @@
             <option value="FNM">FNM ($4.20)</option>
             <option value="Draft">MTG Draft ($19.99)</option>
           </select>
-        </li>
-        <li>
-          <p class="note"><span class="required">*</span> Indicates a required field</p>
-          <p>
-            For pizza night events, please indicate if you want pizza in the
-            message box
-          </p>
+          <label for="pizza" class="pizza">Pizza?:</label>
+          <input type="checkbox" id="pizza" class="pizza" name="pizza" />
         </li>
         <li>
           <button type="submit">Submit</button>
