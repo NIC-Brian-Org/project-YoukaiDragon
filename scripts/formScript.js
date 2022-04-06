@@ -8,7 +8,11 @@ $('#mail').val(email);
 let message = localStorage.getItem('message');
 $('#message').val(message);
 let userEvent = localStorage.getItem('event');
-$('#event').val(userEvent)
+if(userEvent == 'null'){
+  $('#event').val('none');
+} else {
+  $('#event').val(userEvent)
+}
 if(userEvent == 'D&D' || userEvent == 'Commander') {
   let pizza = localStorage.getItem('pizza');
   $('.pizza').css('visibility', 'visible');
@@ -41,4 +45,13 @@ $('#event').change(function () {
     $('.pizza').css('visibility', 'hidden');
     $('#pizza').prop('checked', false);
   }
+});
+
+document.querySelector('#contactForm').addEventListener('submit', function(e){
+  //form submitted, can remove data from local storage
+  localStorage.removeItem('name');
+  localStorage.removeItem('email');
+  localStorage.removeItem('message');
+  localStorage.removeItem('event');
+  localStorage.removeItem('pizza');
 });

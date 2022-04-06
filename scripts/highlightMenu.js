@@ -7,7 +7,7 @@ menu.addEventListener("mouseout", endHighlight)
 
 function highlight(e){
   if(e.target.nodeName == "TD"){
-    e.target.parentNode.style.backgroundColor = "black"
+    e.target.parentNode.style.backgroundColor = "gray"
   }
 }
 
