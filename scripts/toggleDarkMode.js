@@ -1,7 +1,7 @@
 'use strict';
 
 let el = document.getElementById("darkModeToggle");
-el.addEventListener("click",toggleDarkMode);
+el.addEventListener("click", toggleDarkMode);
 el.addEventListener("mouseenter", highlightToggle);
 el.addEventListener("mouseout", stopHighlight);
 
