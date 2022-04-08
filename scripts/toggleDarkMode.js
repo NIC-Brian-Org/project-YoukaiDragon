@@ -14,17 +14,16 @@ toggle.addEventListener("mouseout", stopHighlight);
 
 //set initial mode based on cookie
 let darkMode = getCookie("darkMode");
+let expires = 60 * 60 * 24 * 30;
 if(darkMode == "true") {
-  darkModeOn(toggle);
-  console.log("Dark Mode");
+  darkModeOn(toggle, expires);
 } else {
-  darkModeOff(toggle);
-  console.log("Light Mode");
+  darkModeOff(toggle, expires);
 }
 
 function toggleDarkMode() {
-  //create expiry date approx. 6 months from now
-  let expires = 60 * 60 * 24 * 30 * 6;
+  //create expiry date approx. 1 month from now
+  let expires = 60 * 60 * 24 * 30;
 
   if(toggle.textContent == "Light Mode"){
     darkModeOff(toggle, expires);
