@@ -1,16 +1,24 @@
 'use strict';
+ 
+//create the light/dark mode toggle
+let toggle = document.createElement("p");
+toggle.innerHTML = "Light Mode";
+toggle.id = "darkModeToggle";
 
-let el = document.getElementById("darkModeToggle");
-el.addEventListener("click", toggleDarkMode);
-el.addEventListener("mouseenter", highlightToggle);
-el.addEventListener("mouseout", stopHighlight);
+let header = document.getElementsByTagName("header");
+header[0].appendChild(toggle);
 
+toggle.addEventListener("click", toggleDarkMode);
+toggle.addEventListener("mouseenter", highlightToggle);
+toggle.addEventListener("mouseout", stopHighlight);
+
+//set initial mode based on cookie
 let darkMode = getCookie("darkMode");
 if(darkMode == "true") {
-  darkModeOn(el);
+  darkModeOn(toggle);
   console.log("Dark Mode");
 } else {
-  darkModeOff(el);
+  darkModeOff(toggle);
   console.log("Light Mode");
 }
 
@@ -18,13 +26,17 @@ function toggleDarkMode() {
   //create expiry date approx. 6 months from now
   let expires = 60 * 60 * 24 * 30 * 6;
 
-  if(el.textContent == "Light Mode"){
-    darkModeOff(el, expires);
+  if(toggle.textContent == "Light Mode"){
+    darkModeOff(toggle, expires);
   } else {
-    darkModeOn(el, expires);
+    darkModeOn(toggle, expires);
   }
 }
 
+/*
+These two functions take as input a pointer to the light/dark mode toggle element
+and an expiry time in seconds
+*/
 function darkModeOn(toggle, expires) {
   document.body.id = "darkMode";
   toggle.textContent = "Light Mode";
@@ -38,14 +50,15 @@ function darkModeOff(toggle, expires) {
 }
 
 function highlightToggle() {
-  el.style.color = "orange";
-  el.style.cursor = "pointer";
+  this.style.color = "orange";
+  this.style.cursor = "pointer";
 }
 
 function stopHighlight() {
-  el.style.color = "black";
+  this.style.color = "black";
 }
 
+//This function takes the name of a cookie as input and returns the value of that cookie as a string
 function getCookie(name) {
   let nameEquals = name + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
